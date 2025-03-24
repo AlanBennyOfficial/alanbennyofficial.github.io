@@ -27,16 +27,19 @@
             font-size: 25vw;
             font-weight: bold;
             color: transparent;
-            -webkit-text-stroke: 1px #444;
+            -webkit-text-stroke: 1px white; /* Changed to white */
             position: relative;
             transition: 0.3s ease;
         }
 
+        /* Remove or comment out this hover rule that removes the stroke */
+        /* 
         .text:hover {
             -webkit-text-stroke: 1px transparent;
             color: transparent;
             background: none;
         }
+        */
 
         .text::before {
             content: "Hello";
@@ -51,7 +54,21 @@
             background-size: 200% 200%;
             -webkit-background-clip: text;
             opacity: 0;
-            transition: opacity 0.3s ease, background-position 0.5s ease;
+            transition: opacity 5.3s ease, background-position 5.5s ease;
+            /* Updated mask for 150px solid circle with taper off */
+            -webkit-mask-image: radial-gradient(
+                circle at var(--mouse-x, 80%) var(--mouse-y, 80%),
+                white 0px,
+                white 150px,
+                transparent 200px
+            );
+            mask-image: radial-gradient(
+                circle at var(--mouse-x, 80%) var(--mouse-y, 80%),
+                white 0px,
+                white 150px,
+                transparent 200px
+            );
+            z-index: 2; /* Ensure it sits above the base text */
         }
 
         .text:hover::before {
@@ -68,7 +85,7 @@
             font-size: 25vw; /* Slightly smaller size */
             color: black;
             -webkit-text-stroke: 0;
-            z-index: 1;
+            z-index: 3; /* Solid text on top */
             pointer-events: none;
         }
 
@@ -126,5 +143,15 @@
                             </svg></a>
         </div>
     </div>
+    <script>
+        const textEl = document.querySelector('.text');
+        textEl.addEventListener('mousemove', (e) => {
+            const rect = textEl.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+            textEl.style.setProperty('--mouse-x', mouseX + 'px');
+            textEl.style.setProperty('--mouse-y', mouseY + 'px');
+        });
+    </script>
 </body>
 </html>
