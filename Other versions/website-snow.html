@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alan Benny</title>
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/148381987?v=4"
-    type="image/x-icon" />
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/148381987?v=4" type="image/x-icon" />
     <style>
-
         .bg {
             z-index: -1;
             position: fixed;
@@ -19,7 +18,7 @@
             opacity: 0;
             animation: main-loadup 1s forwards linear, main-loadup-bg 10s forwards linear;
             animation-delay: 0.6s, 8s;
-            
+
         }
 
         @keyframes main-loadup {
@@ -53,7 +52,7 @@
             overflow: hidden;
         }
 
-        .initial-snow > * {
+        .initial-snow>* {
             font-size: 30px;
             color: white;
             position: absolute;
@@ -580,9 +579,10 @@
             background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
             background-size: 200% 200%;
             -webkit-background-clip: text;
+            background-clip: text;
             opacity: 0;
             transition: opacity 0.3s ease, background-position 0.5s ease;
-            
+
         }
 
         .text:hover::before {
@@ -596,7 +596,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 25vw; /* Slightly smaller size */
+            font-size: 25vw;
+            /* Slightly smaller size */
             color: black;
             -webkit-text-stroke: 0;
             z-index: 1;
@@ -629,6 +630,7 @@
         }
     </style>
 </head>
+
 <body>
     <!--snow effect-->
     <div class="bg">
@@ -691,27 +693,29 @@
         <div class="links">
             <!--<a href="#">Learn More</a>-->
             <a href="https://github.com/alanbennyofficial">GitHub<style data-emotion="css vubbuv">
-                .css-vubbuv {
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                    width: 1em;
-                    height: 1em;
-                    display: inline-block;
-                    fill: currentColor;
-                    -webkit-flex-shrink: 0;
-                    -ms-flex-negative: 0;
-                    flex-shrink: 0;
-                    -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-                    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-                    font-size: 1.5rem;
-                }
-            </style><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowOutwardIcon">
-                                <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
-                            </svg></a>
+                    .css-vubbuv {
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        width: 1em;
+                        height: 1em;
+                        display: inline-block;
+                        fill: currentColor;
+                        -webkit-flex-shrink: 0;
+                        -ms-flex-negative: 0;
+                        flex-shrink: 0;
+                        -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                        transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                        font-size: 1.5rem;
+                    }
+                </style><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false"
+                    aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowOutwardIcon">
+                    <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
+                </svg></a>
         </div>
     </div>
-    
+
 </body>
+
 </html>
